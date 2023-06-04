@@ -1,4 +1,10 @@
-import { PartialType } from '@nestjs/mapped-types';
-import { CreateProductDto } from './create-product.dto';
 
-export class UpdateProductDto extends PartialType(CreateProductDto) {}
+import { ApiProperty } from '@nestjs/swagger';
+
+export class UpdateProductDto {
+    @ApiProperty()
+    product_name:string
+
+    @ApiProperty()
+    product_value:number
+}
